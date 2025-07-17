@@ -1,6 +1,9 @@
 # HOMEWORK_mysql_repl_Master-Slave
 
 ## Подготовмм
+можно скачать готовый
+
+``` git clone https://github.com/ortariot/my_sql_replication.git```
 создадим master 
 
 запустим контейер и назначим пароль
