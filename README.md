@@ -117,3 +117,42 @@ SHOW REPLICA STATUS\G
 
 ![alt text](image-16.png)
 
+
+``` STOP REPLICA;```
+
+![alt text](image-17.png)
+
+```RESET REPLICA ALL; ``` 
+## !! Сбросит все настройки репликации (не запускай)
+
+```
+ START REPLICA;
+```
+
+
+``` SHOW BINARY LOG STATUS;```
+![alt text](image-18.png)
+
+
+создадим БД на мастере 
+
+```
+CREATE DATABASE demo;
+use demo;
+CREATE TABLE test (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id));
+show tables;
+```
+
+![alt text](image-19.png)
+
+
+на реплике появилась таблица
+![alt text](image-20.png)
+
+```
+INSERT INTO test (name) VALUES ('one'), ('Two'), ('thr
+ee');
+SELECT * FROM test;
+```
+
+![alt text](image-21.png)
